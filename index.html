@@ -246,7 +246,7 @@ th, td { text-align: left; padding: 4px 12px 4px 0; border-bottom: 1px solid var
         plan.push({ id: it.id, block, left: it.keys[flip ? 1 : 0], right: it.keys[flip ? 0 : 1], isCatch: it.isCatch });
       }
     }
-    return { schema: SCHEMA, seed, started_at: new Date().toISOString(), finished: false, plan, pos: 0,
+    return { schema: SCHEMA, seed, test: TEST, started_at: new Date().toISOString(), finished: false, plan, pos: 0,
              answers: [], meta: { experience: $("exp").value, display: $("disp").value,
                                   viewport_w: window.innerWidth, dpr: window.devicePixelRatio || 1 } };
   }
@@ -256,7 +256,7 @@ th, td { text-align: left; padding: 4px 12px 4px 0; border-bottom: 1px solid var
   function saveDraft() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* storage blocked */ } }
   function loadDraft() { try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); return s && s.schema === SCHEMA ? s : null; } catch (e) { return null; } }
   function record() {
-    return { schema: state.schema, pid: PID, test: TEST, seed: state.seed, started_at: state.started_at,
+    return { schema: state.schema, pid: PID, test: state.test === true || TEST, seed: state.seed, started_at: state.started_at,
              updated_at: new Date().toISOString(), finished: state.finished, meta: state.meta,
              n_answers: state.answers.length, answers: state.answers };
   }
