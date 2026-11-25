@@ -1,0 +1,1817 @@
+{
+ "trials": [
+  {
+   "id": "t000",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_001_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    704,
+    768
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t000_generative.png",
+    "caps": "stimuli/t000_caps.png",
+    "reference": "stimuli/t000_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.21274995803833,
+     "lpips": 0.09651155769824982,
+     "dists": 0.17589110136032104,
+     "musiq": 73.29436492919922,
+     "maniqa": 0.5884785056114197,
+     "clipiqa": 0.37798964977264404
+    },
+    "caps": {
+     "psnr_y": 24.345695972442627,
+     "lpips": 0.0812678262591362,
+     "dists": 0.19073039293289185,
+     "musiq": 63.399356842041016,
+     "maniqa": 0.49220067262649536,
+     "clipiqa": 0.3025142550468445
+    }
+   }
+  },
+  {
+   "id": "t001",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_015_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    5,
+    150
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t001_generative.png",
+    "caps": "stimuli/t001_caps.png",
+    "reference": "stimuli/t001_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 21.155240535736084,
+     "lpips": 0.47972410917282104,
+     "dists": 0.28837281465530396,
+     "musiq": 28.24932861328125,
+     "maniqa": 0.2097185105085373,
+     "clipiqa": 0.4003617763519287
+    },
+    "caps": {
+     "psnr_y": 21.120831966400146,
+     "lpips": 0.4631745219230652,
+     "dists": 0.2703579068183899,
+     "musiq": 33.75423049926758,
+     "maniqa": 0.24859727919101715,
+     "clipiqa": 0.2418363392353058
+    }
+   }
+  },
+  {
+   "id": "t002",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_032_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    0,
+    512
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t002_generative.png",
+    "caps": "stimuli/t002_caps.png",
+    "reference": "stimuli/t002_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.88490915298462,
+     "lpips": 0.26312628388404846,
+     "dists": 0.23175817728042603,
+     "musiq": 42.36518096923828,
+     "maniqa": 0.26303330063819885,
+     "clipiqa": 0.1997034251689911
+    },
+    "caps": {
+     "psnr_y": 24.26292896270752,
+     "lpips": 0.2768779397010803,
+     "dists": 0.24818307161331177,
+     "musiq": 39.38075637817383,
+     "maniqa": 0.20120586454868317,
+     "clipiqa": 0.23455455899238586
+    }
+   }
+  },
+  {
+   "id": "t003",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_049_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    136,
+    342
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t003_generative.png",
+    "caps": "stimuli/t003_caps.png",
+    "reference": "stimuli/t003_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 22.8592848777771,
+     "lpips": 0.14129911363124847,
+     "dists": 0.22109973430633545,
+     "musiq": 54.691036224365234,
+     "maniqa": 0.4304746985435486,
+     "clipiqa": 0.5814948081970215
+    },
+    "caps": {
+     "psnr_y": 25.319011211395264,
+     "lpips": 0.1475452184677124,
+     "dists": 0.21321886777877808,
+     "musiq": 45.99995040893555,
+     "maniqa": 0.4203107953071594,
+     "clipiqa": 0.5694195032119751
+    }
+   }
+  },
+  {
+   "id": "t004",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_001_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    0,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t004_generative.png",
+    "caps": "stimuli/t004_caps.png",
+    "reference": "stimuli/t004_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.513405799865723,
+     "lpips": 0.13054871559143066,
+     "dists": 0.22382748126983643,
+     "musiq": 54.09882736206055,
+     "maniqa": 0.5219206809997559,
+     "clipiqa": 0.4756726324558258
+    },
+    "caps": {
+     "psnr_y": 21.325035095214844,
+     "lpips": 0.11884661763906479,
+     "dists": 0.2106984257698059,
+     "musiq": 51.36017608642578,
+     "maniqa": 0.4846455454826355,
+     "clipiqa": 0.4152594208717346
+    }
+   }
+  },
+  {
+   "id": "t005",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_017_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    782,
+    1469
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t005_generative.png",
+    "caps": "stimuli/t005_caps.png",
+    "reference": "stimuli/t005_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 28.011891841888428,
+     "lpips": 0.14667415618896484,
+     "dists": 0.15098613500595093,
+     "musiq": 54.937530517578125,
+     "maniqa": 0.4535590708255768,
+     "clipiqa": 0.5172196626663208
+    },
+    "caps": {
+     "psnr_y": 29.059395790100098,
+     "lpips": 0.13850083947181702,
+     "dists": 0.1635134220123291,
+     "musiq": 48.717350006103516,
+     "maniqa": 0.3639138638973236,
+     "clipiqa": 0.44142675399780273
+    }
+   }
+  },
+  {
+   "id": "t006",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_033_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    0,
+    384
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t006_generative.png",
+    "caps": "stimuli/t006_caps.png",
+    "reference": "stimuli/t006_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 21.185357570648193,
+     "lpips": 0.20904576778411865,
+     "dists": 0.22098016738891602,
+     "musiq": 59.717681884765625,
+     "maniqa": 0.4540596306324005,
+     "clipiqa": 0.23798076808452606
+    },
+    "caps": {
+     "psnr_y": 22.64131784439087,
+     "lpips": 0.3635559678077698,
+     "dists": 0.3446447253227234,
+     "musiq": 39.054054260253906,
+     "maniqa": 0.30747321248054504,
+     "clipiqa": 0.1354827731847763
+    }
+   }
+  },
+  {
+   "id": "t007",
+   "method": "Real-ESRGAN",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_050_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    860,
+    392
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t007_generative.png",
+    "caps": "stimuli/t007_caps.png",
+    "reference": "stimuli/t007_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.817639350891113,
+     "lpips": 0.2824416160583496,
+     "dists": 0.22454190254211426,
+     "musiq": 63.917510986328125,
+     "maniqa": 0.523222029209137,
+     "clipiqa": 0.5631069540977478
+    },
+    "caps": {
+     "psnr_y": 25.11463165283203,
+     "lpips": 0.21810795366764069,
+     "dists": 0.21577274799346924,
+     "musiq": 51.45943069458008,
+     "maniqa": 0.40299680829048157,
+     "clipiqa": 0.45185431838035583
+    }
+   }
+  },
+  {
+   "id": "t008",
+   "method": "Real-ESRGAN",
+   "set": "DRealSR_x4",
+   "stem": "Canon_10_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    1984,
+    3584
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t008_generative.png",
+    "caps": "stimuli/t008_caps.png",
+    "reference": "stimuli/t008_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.811762809753418,
+     "lpips": 0.27313658595085144,
+     "dists": 0.2591271996498108,
+     "musiq": 54.325599670410156,
+     "maniqa": 0.3709597885608673,
+     "clipiqa": 0.6068631410598755
+    },
+    "caps": {
+     "psnr_y": 19.685769081115723,
+     "lpips": 0.289862722158432,
+     "dists": 0.2675589323043823,
+     "musiq": 56.26074981689453,
+     "maniqa": 0.3643892705440521,
+     "clipiqa": 0.6656734943389893
+    }
+   }
+  },
+  {
+   "id": "t009",
+   "method": "Real-ESRGAN",
+   "set": "DRealSR_x4",
+   "stem": "IMG_140_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    1007,
+    5112
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t009_generative.png",
+    "caps": "stimuli/t009_caps.png",
+    "reference": "stimuli/t009_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 34.689879417419434,
+     "lpips": 0.1861337572336197,
+     "dists": 0.17186665534973145,
+     "musiq": 31.597410202026367,
+     "maniqa": 0.3722376525402069,
+     "clipiqa": 0.6020610928535461
+    },
+    "caps": {
+     "psnr_y": 35.34749746322632,
+     "lpips": 0.17816898226737976,
+     "dists": 0.17168807983398438,
+     "musiq": 25.184743881225586,
+     "maniqa": 0.3227609395980835,
+     "clipiqa": 0.43823856115341187
+    }
+   }
+  },
+  {
+   "id": "t010",
+   "method": "Real-ESRGAN",
+   "set": "DRealSR_x4",
+   "stem": "panasonic_158_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    1408,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t010_generative.png",
+    "caps": "stimuli/t010_caps.png",
+    "reference": "stimuli/t010_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 24.350996017456055,
+     "lpips": 0.4643767476081848,
+     "dists": 0.28660619258880615,
+     "musiq": 43.03890609741211,
+     "maniqa": 0.16157840192317963,
+     "clipiqa": 0.2878246307373047
+    },
+    "caps": {
+     "psnr_y": 24.870028495788574,
+     "lpips": 0.5102214813232422,
+     "dists": 0.28760606050491333,
+     "musiq": 28.668127059936523,
+     "maniqa": 0.09363637119531631,
+     "clipiqa": 0.21557769179344177
+    }
+   }
+  },
+  {
+   "id": "t011",
+   "method": "Real-ESRGAN",
+   "set": "DRealSR_x4",
+   "stem": "sony_82_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    2540,
+    1800
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t011_generative.png",
+    "caps": "stimuli/t011_caps.png",
+    "reference": "stimuli/t011_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 22.896146774291992,
+     "lpips": 0.2855638563632965,
+     "dists": 0.20088821649551392,
+     "musiq": 44.79292678833008,
+     "maniqa": 0.2978554666042328,
+     "clipiqa": 0.3374220132827759
+    },
+    "caps": {
+     "psnr_y": 23.793373107910156,
+     "lpips": 0.32934582233428955,
+     "dists": 0.22433853149414062,
+     "musiq": 31.508758544921875,
+     "maniqa": 0.19880075752735138,
+     "clipiqa": 0.24017123878002167
+    }
+   }
+  },
+  {
+   "id": "t012",
+   "method": "OSEDiff",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_001_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    704,
+    768
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t012_generative.png",
+    "caps": "stimuli/t012_caps.png",
+    "reference": "stimuli/t012_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 22.188031673431396,
+     "lpips": 0.1365102082490921,
+     "dists": 0.19558072090148926,
+     "musiq": 73.97235107421875,
+     "maniqa": 0.6896736025810242,
+     "clipiqa": 0.56429123878479
+    },
+    "caps": {
+     "psnr_y": 24.376306533813477,
+     "lpips": 0.0807332694530487,
+     "dists": 0.19570940732955933,
+     "musiq": 62.5305061340332,
+     "maniqa": 0.4613063931465149,
+     "clipiqa": 0.37689244747161865
+    }
+   }
+  },
+  {
+   "id": "t013",
+   "method": "OSEDiff",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_015_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    5,
+    150
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t013_generative.png",
+    "caps": "stimuli/t013_caps.png",
+    "reference": "stimuli/t013_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 19.507592916488647,
+     "lpips": 0.4219013452529907,
+     "dists": 0.2900294065475464,
+     "musiq": 54.42544937133789,
+     "maniqa": 0.3801169991493225,
+     "clipiqa": 0.8009485006332397
+    },
+    "caps": {
+     "psnr_y": 21.20133638381958,
+     "lpips": 0.425203800201416,
+     "dists": 0.26491081714630127,
+     "musiq": 33.0455436706543,
+     "maniqa": 0.21364761888980865,
+     "clipiqa": 0.3179932236671448
+    }
+   }
+  },
+  {
+   "id": "t014",
+   "method": "OSEDiff",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_032_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    0,
+    512
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t014_generative.png",
+    "caps": "stimuli/t014_caps.png",
+    "reference": "stimuli/t014_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 22.44197368621826,
+     "lpips": 0.27437305450439453,
+     "dists": 0.22464680671691895,
+     "musiq": 62.48728942871094,
+     "maniqa": 0.3507413864135742,
+     "clipiqa": 0.568892776966095
+    },
+    "caps": {
+     "psnr_y": 24.315598011016846,
+     "lpips": 0.25757503509521484,
+     "dists": 0.24325156211853027,
+     "musiq": 39.02174377441406,
+     "maniqa": 0.1750268042087555,
+     "clipiqa": 0.2472672164440155
+    }
+   }
+  },
+  {
+   "id": "t015",
+   "method": "OSEDiff",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_049_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    136,
+    342
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t015_generative.png",
+    "caps": "stimuli/t015_caps.png",
+    "reference": "stimuli/t015_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 26.714966297149658,
+     "lpips": 0.14652583003044128,
+     "dists": 0.17712140083312988,
+     "musiq": 53.25761795043945,
+     "maniqa": 0.48255282640457153,
+     "clipiqa": 0.700581431388855
+    },
+    "caps": {
+     "psnr_y": 26.26955509185791,
+     "lpips": 0.14279665052890778,
+     "dists": 0.20521938800811768,
+     "musiq": 45.82453155517578,
+     "maniqa": 0.4186534881591797,
+     "clipiqa": 0.5521557331085205
+    }
+   }
+  },
+  {
+   "id": "t016",
+   "method": "OSEDiff",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_001_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    0,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t016_generative.png",
+    "caps": "stimuli/t016_caps.png",
+    "reference": "stimuli/t016_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.82939624786377,
+     "lpips": 0.16469967365264893,
+     "dists": 0.22765249013900757,
+     "musiq": 54.9099235534668,
+     "maniqa": 0.5423783659934998,
+     "clipiqa": 0.5619937181472778
+    },
+    "caps": {
+     "psnr_y": 21.945228576660156,
+     "lpips": 0.12021234631538391,
+     "dists": 0.21177178621292114,
+     "musiq": 52.19456100463867,
+     "maniqa": 0.5094494223594666,
+     "clipiqa": 0.4772725999355316
+    }
+   }
+  },
+  {
+   "id": "t017",
+   "method": "OSEDiff",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_017_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    782,
+    1469
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t017_generative.png",
+    "caps": "stimuli/t017_caps.png",
+    "reference": "stimuli/t017_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 25.226545333862305,
+     "lpips": 0.20650124549865723,
+     "dists": 0.21041083335876465,
+     "musiq": 64.30342102050781,
+     "maniqa": 0.6408969163894653,
+     "clipiqa": 0.7540031671524048
+    },
+    "caps": {
+     "psnr_y": 29.0763258934021,
+     "lpips": 0.17274850606918335,
+     "dists": 0.19801437854766846,
+     "musiq": 48.503501892089844,
+     "maniqa": 0.3880022466182709,
+     "clipiqa": 0.5024591684341431
+    }
+   }
+  },
+  {
+   "id": "t018",
+   "method": "OSEDiff",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_033_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    0,
+    384
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t018_generative.png",
+    "caps": "stimuli/t018_caps.png",
+    "reference": "stimuli/t018_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.594921112060547,
+     "lpips": 0.35679081082344055,
+     "dists": 0.24260342121124268,
+     "musiq": 65.51200866699219,
+     "maniqa": 0.5755003690719604,
+     "clipiqa": 0.28235793113708496
+    },
+    "caps": {
+     "psnr_y": 22.79837131500244,
+     "lpips": 0.5095494389533997,
+     "dists": 0.3697831630706787,
+     "musiq": 32.71286392211914,
+     "maniqa": 0.29316431283950806,
+     "clipiqa": 0.13658341765403748
+    }
+   }
+  },
+  {
+   "id": "t019",
+   "method": "OSEDiff",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_050_HR",
+   "caps_c": 0.25,
+   "crop_tl": [
+    860,
+    392
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t019_generative.png",
+    "caps": "stimuli/t019_caps.png",
+    "reference": "stimuli/t019_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 25.878496170043945,
+     "lpips": 0.280901163816452,
+     "dists": 0.25348055362701416,
+     "musiq": 64.28131103515625,
+     "maniqa": 0.5626572966575623,
+     "clipiqa": 0.5989800691604614
+    },
+    "caps": {
+     "psnr_y": 25.8719539642334,
+     "lpips": 0.21948730945587158,
+     "dists": 0.24562984704971313,
+     "musiq": 53.36235427856445,
+     "maniqa": 0.41562074422836304,
+     "clipiqa": 0.44752469658851624
+    }
+   }
+  },
+  {
+   "id": "t020",
+   "method": "OSEDiff",
+   "set": "DRealSR_x4",
+   "stem": "Canon_10_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    1984,
+    3584
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t020_generative.png",
+    "caps": "stimuli/t020_caps.png",
+    "reference": "stimuli/t020_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 24.236440658569336,
+     "lpips": 0.3355380594730377,
+     "dists": 0.25618976354599,
+     "musiq": 57.19508361816406,
+     "maniqa": 0.4924048185348511,
+     "clipiqa": 0.7201290726661682
+    },
+    "caps": {
+     "psnr_y": 19.58448052406311,
+     "lpips": 0.3042134642601013,
+     "dists": 0.27907586097717285,
+     "musiq": 56.625999450683594,
+     "maniqa": 0.39586371183395386,
+     "clipiqa": 0.6614971160888672
+    }
+   }
+  },
+  {
+   "id": "t021",
+   "method": "OSEDiff",
+   "set": "DRealSR_x4",
+   "stem": "IMG_140_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    1007,
+    5112
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t021_generative.png",
+    "caps": "stimuli/t021_caps.png",
+    "reference": "stimuli/t021_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 28.953115940093994,
+     "lpips": 0.1976226270198822,
+     "dists": 0.17554134130477905,
+     "musiq": 58.104801177978516,
+     "maniqa": 0.5187859535217285,
+     "clipiqa": 0.8371655344963074
+    },
+    "caps": {
+     "psnr_y": 35.373380184173584,
+     "lpips": 0.14003436267375946,
+     "dists": 0.14609622955322266,
+     "musiq": 27.638044357299805,
+     "maniqa": 0.30712634325027466,
+     "clipiqa": 0.5790314674377441
+    }
+   }
+  },
+  {
+   "id": "t022",
+   "method": "OSEDiff",
+   "set": "DRealSR_x4",
+   "stem": "panasonic_158_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    1408,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t022_generative.png",
+    "caps": "stimuli/t022_caps.png",
+    "reference": "stimuli/t022_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 22.801618576049805,
+     "lpips": 0.4868113398551941,
+     "dists": 0.2648897171020508,
+     "musiq": 68.29019165039062,
+     "maniqa": 0.5620535016059875,
+     "clipiqa": 0.6553517580032349
+    },
+    "caps": {
+     "psnr_y": 25.17155647277832,
+     "lpips": 0.5162145495414734,
+     "dists": 0.2779945731163025,
+     "musiq": 29.018226623535156,
+     "maniqa": 0.0849437341094017,
+     "clipiqa": 0.21932530403137207
+    }
+   }
+  },
+  {
+   "id": "t023",
+   "method": "OSEDiff",
+   "set": "DRealSR_x4",
+   "stem": "sony_82_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    2540,
+    1800
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t023_generative.png",
+    "caps": "stimuli/t023_caps.png",
+    "reference": "stimuli/t023_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.352768421173096,
+     "lpips": 0.3864535987377167,
+     "dists": 0.23113161325454712,
+     "musiq": 60.84197235107422,
+     "maniqa": 0.48499229550361633,
+     "clipiqa": 0.7898576259613037
+    },
+    "caps": {
+     "psnr_y": 24.10785675048828,
+     "lpips": 0.3551208972930908,
+     "dists": 0.2279644012451172,
+     "musiq": 33.02445983886719,
+     "maniqa": 0.2244286686182022,
+     "clipiqa": 0.22527816891670227
+    }
+   }
+  },
+  {
+   "id": "t024",
+   "method": "PiSA-SR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_001_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    704,
+    768
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t024_generative.png",
+    "caps": "stimuli/t024_caps.png",
+    "reference": "stimuli/t024_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 24.63146209716797,
+     "lpips": 0.10107698291540146,
+     "dists": 0.16448843479156494,
+     "musiq": 72.60752868652344,
+     "maniqa": 0.6692068576812744,
+     "clipiqa": 0.49911537766456604
+    },
+    "caps": {
+     "psnr_y": 24.697163105010986,
+     "lpips": 0.07969412207603455,
+     "dists": 0.19048559665679932,
+     "musiq": 62.31928253173828,
+     "maniqa": 0.4741966426372528,
+     "clipiqa": 0.46234455704689026
+    }
+   }
+  },
+  {
+   "id": "t025",
+   "method": "PiSA-SR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_015_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    5,
+    150
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t025_generative.png",
+    "caps": "stimuli/t025_caps.png",
+    "reference": "stimuli/t025_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 19.407066106796265,
+     "lpips": 0.36064282059669495,
+     "dists": 0.24261492490768433,
+     "musiq": 57.10765838623047,
+     "maniqa": 0.40619465708732605,
+     "clipiqa": 0.7756985425949097
+    },
+    "caps": {
+     "psnr_y": 21.209895610809326,
+     "lpips": 0.4246576130390167,
+     "dists": 0.26609939336776733,
+     "musiq": 33.61146545410156,
+     "maniqa": 0.20793545246124268,
+     "clipiqa": 0.33844688534736633
+    }
+   }
+  },
+  {
+   "id": "t026",
+   "method": "PiSA-SR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_032_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    0,
+    512
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t026_generative.png",
+    "caps": "stimuli/t026_caps.png",
+    "reference": "stimuli/t026_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.238651752471924,
+     "lpips": 0.2657491862773895,
+     "dists": 0.21812647581100464,
+     "musiq": 68.12689208984375,
+     "maniqa": 0.4228116273880005,
+     "clipiqa": 0.46968740224838257
+    },
+    "caps": {
+     "psnr_y": 24.43410634994507,
+     "lpips": 0.25792020559310913,
+     "dists": 0.23948520421981812,
+     "musiq": 39.94913101196289,
+     "maniqa": 0.17829039692878723,
+     "clipiqa": 0.22902555763721466
+    }
+   }
+  },
+  {
+   "id": "t027",
+   "method": "PiSA-SR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_049_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    136,
+    342
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t027_generative.png",
+    "caps": "stimuli/t027_caps.png",
+    "reference": "stimuli/t027_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 26.026618480682373,
+     "lpips": 0.14958229660987854,
+     "dists": 0.17570126056671143,
+     "musiq": 53.3623161315918,
+     "maniqa": 0.4364084303379059,
+     "clipiqa": 0.6236101388931274
+    },
+    "caps": {
+     "psnr_y": 26.247522830963135,
+     "lpips": 0.14434555172920227,
+     "dists": 0.20547395944595337,
+     "musiq": 46.04948806762695,
+     "maniqa": 0.4228454530239105,
+     "clipiqa": 0.5244707465171814
+    }
+   }
+  },
+  {
+   "id": "t028",
+   "method": "PiSA-SR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_001_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    0,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t028_generative.png",
+    "caps": "stimuli/t028_caps.png",
+    "reference": "stimuli/t028_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 21.647024154663086,
+     "lpips": 0.1318613886833191,
+     "dists": 0.24103260040283203,
+     "musiq": 54.44234085083008,
+     "maniqa": 0.5758943557739258,
+     "clipiqa": 0.5270739793777466
+    },
+    "caps": {
+     "psnr_y": 22.18522071838379,
+     "lpips": 0.12088708579540253,
+     "dists": 0.22020304203033447,
+     "musiq": 51.349815368652344,
+     "maniqa": 0.5041738152503967,
+     "clipiqa": 0.5003275871276855
+    }
+   }
+  },
+  {
+   "id": "t029",
+   "method": "PiSA-SR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_017_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    782,
+    1469
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t029_generative.png",
+    "caps": "stimuli/t029_caps.png",
+    "reference": "stimuli/t029_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 28.324356079101562,
+     "lpips": 0.17671427130699158,
+     "dists": 0.19488829374313354,
+     "musiq": 64.34773254394531,
+     "maniqa": 0.6126229166984558,
+     "clipiqa": 0.7782135605812073
+    },
+    "caps": {
+     "psnr_y": 29.311106204986572,
+     "lpips": 0.1584327071905136,
+     "dists": 0.18963909149169922,
+     "musiq": 48.23663330078125,
+     "maniqa": 0.3661162257194519,
+     "clipiqa": 0.6598607301712036
+    }
+   }
+  },
+  {
+   "id": "t030",
+   "method": "PiSA-SR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_033_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    0,
+    384
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t030_generative.png",
+    "caps": "stimuli/t030_caps.png",
+    "reference": "stimuli/t030_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.974550247192383,
+     "lpips": 0.27203819155693054,
+     "dists": 0.18445050716400146,
+     "musiq": 63.78142547607422,
+     "maniqa": 0.5659846067428589,
+     "clipiqa": 0.39968249201774597
+    },
+    "caps": {
+     "psnr_y": 22.766857147216797,
+     "lpips": 0.41317060589790344,
+     "dists": 0.35176748037338257,
+     "musiq": 34.570308685302734,
+     "maniqa": 0.309342622756958,
+     "clipiqa": 0.16333813965320587
+    }
+   }
+  },
+  {
+   "id": "t031",
+   "method": "PiSA-SR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_050_HR",
+   "caps_c": 0.5,
+   "crop_tl": [
+    860,
+    392
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t031_generative.png",
+    "caps": "stimuli/t031_caps.png",
+    "reference": "stimuli/t031_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 26.180224418640137,
+     "lpips": 0.2682855427265167,
+     "dists": 0.2541813850402832,
+     "musiq": 65.8057861328125,
+     "maniqa": 0.5587036609649658,
+     "clipiqa": 0.590569257736206
+    },
+    "caps": {
+     "psnr_y": 26.344938278198242,
+     "lpips": 0.21029981970787048,
+     "dists": 0.23414242267608643,
+     "musiq": 52.51156234741211,
+     "maniqa": 0.41124770045280457,
+     "clipiqa": 0.46445026993751526
+    }
+   }
+  },
+  {
+   "id": "t032",
+   "method": "PiSA-SR",
+   "set": "DRealSR_x4",
+   "stem": "Canon_10_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    1984,
+    3584
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t032_generative.png",
+    "caps": "stimuli/t032_caps.png",
+    "reference": "stimuli/t032_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 24.54533576965332,
+     "lpips": 0.30864253640174866,
+     "dists": 0.2758229970932007,
+     "musiq": 58.04808807373047,
+     "maniqa": 0.49380165338516235,
+     "clipiqa": 0.6740542054176331
+    },
+    "caps": {
+     "psnr_y": 19.58372473716736,
+     "lpips": 0.3092527389526367,
+     "dists": 0.2786451578140259,
+     "musiq": 56.552608489990234,
+     "maniqa": 0.40390297770500183,
+     "clipiqa": 0.5944435596466064
+    }
+   }
+  },
+  {
+   "id": "t033",
+   "method": "PiSA-SR",
+   "set": "DRealSR_x4",
+   "stem": "IMG_140_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    1007,
+    5112
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t033_generative.png",
+    "caps": "stimuli/t033_caps.png",
+    "reference": "stimuli/t033_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 31.599431037902832,
+     "lpips": 0.23274613916873932,
+     "dists": 0.17785829305648804,
+     "musiq": 57.380821228027344,
+     "maniqa": 0.523942768573761,
+     "clipiqa": 0.7551507353782654
+    },
+    "caps": {
+     "psnr_y": 35.6406569480896,
+     "lpips": 0.12418186664581299,
+     "dists": 0.14405477046966553,
+     "musiq": 27.36943817138672,
+     "maniqa": 0.3065662682056427,
+     "clipiqa": 0.536803126335144
+    }
+   }
+  },
+  {
+   "id": "t034",
+   "method": "PiSA-SR",
+   "set": "DRealSR_x4",
+   "stem": "panasonic_158_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    1408,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t034_generative.png",
+    "caps": "stimuli/t034_caps.png",
+    "reference": "stimuli/t034_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.422985076904297,
+     "lpips": 0.42691323161125183,
+     "dists": 0.28271764516830444,
+     "musiq": 64.97415161132812,
+     "maniqa": 0.5305517315864563,
+     "clipiqa": 0.5118557810783386
+    },
+    "caps": {
+     "psnr_y": 25.055816173553467,
+     "lpips": 0.5202033519744873,
+     "dists": 0.28753793239593506,
+     "musiq": 29.324007034301758,
+     "maniqa": 0.08962215483188629,
+     "clipiqa": 0.2148919552564621
+    }
+   }
+  },
+  {
+   "id": "t035",
+   "method": "PiSA-SR",
+   "set": "DRealSR_x4",
+   "stem": "sony_82_x4",
+   "caps_c": 0.25,
+   "crop_tl": [
+    2540,
+    1800
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t035_generative.png",
+    "caps": "stimuli/t035_caps.png",
+    "reference": "stimuli/t035_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.490471839904785,
+     "lpips": 0.33585983514785767,
+     "dists": 0.22729462385177612,
+     "musiq": 53.065853118896484,
+     "maniqa": 0.37067845463752747,
+     "clipiqa": 0.6223524212837219
+    },
+    "caps": {
+     "psnr_y": 24.10689115524292,
+     "lpips": 0.3542928397655487,
+     "dists": 0.23042482137680054,
+     "musiq": 32.48459243774414,
+     "maniqa": 0.22166408598423004,
+     "clipiqa": 0.24033832550048828
+    }
+   }
+  },
+  {
+   "id": "t036",
+   "method": "SeeSR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_001_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    704,
+    768
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t036_generative.png",
+    "caps": "stimuli/t036_caps.png",
+    "reference": "stimuli/t036_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 24.068880081176758,
+     "lpips": 0.10595884919166565,
+     "dists": 0.1749030351638794,
+     "musiq": 72.10249328613281,
+     "maniqa": 0.6676273941993713,
+     "clipiqa": 0.6189028024673462
+    },
+    "caps": {
+     "psnr_y": 24.778177738189697,
+     "lpips": 0.08439439535140991,
+     "dists": 0.19869482517242432,
+     "musiq": 62.5737419128418,
+     "maniqa": 0.47954967617988586,
+     "clipiqa": 0.3655024766921997
+    }
+   }
+  },
+  {
+   "id": "t037",
+   "method": "SeeSR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_015_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    5,
+    150
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t037_generative.png",
+    "caps": "stimuli/t037_caps.png",
+    "reference": "stimuli/t037_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.233581066131592,
+     "lpips": 0.31188005208969116,
+     "dists": 0.2313421368598938,
+     "musiq": 50.39690399169922,
+     "maniqa": 0.2661153972148895,
+     "clipiqa": 0.5429934859275818
+    },
+    "caps": {
+     "psnr_y": 21.22757911682129,
+     "lpips": 0.3873663544654846,
+     "dists": 0.26091480255126953,
+     "musiq": 31.27029800415039,
+     "maniqa": 0.18884475529193878,
+     "clipiqa": 0.268083781003952
+    }
+   }
+  },
+  {
+   "id": "t038",
+   "method": "SeeSR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_032_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    0,
+    512
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t038_generative.png",
+    "caps": "stimuli/t038_caps.png",
+    "reference": "stimuli/t038_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.820574283599854,
+     "lpips": 0.2960696518421173,
+     "dists": 0.23304307460784912,
+     "musiq": 65.9556884765625,
+     "maniqa": 0.5042018890380859,
+     "clipiqa": 0.6219230890274048
+    },
+    "caps": {
+     "psnr_y": 24.692082405090332,
+     "lpips": 0.24614743888378143,
+     "dists": 0.24638622999191284,
+     "musiq": 39.34553146362305,
+     "maniqa": 0.1868991255760193,
+     "clipiqa": 0.27419501543045044
+    }
+   }
+  },
+  {
+   "id": "t039",
+   "method": "SeeSR",
+   "set": "RealSR_Canon_x4",
+   "stem": "Canon_049_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    136,
+    342
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t039_generative.png",
+    "caps": "stimuli/t039_caps.png",
+    "reference": "stimuli/t039_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 28.182010650634766,
+     "lpips": 0.13965317606925964,
+     "dists": 0.19378554821014404,
+     "musiq": 56.97808074951172,
+     "maniqa": 0.48523858189582825,
+     "clipiqa": 0.6845935583114624
+    },
+    "caps": {
+     "psnr_y": 26.758882999420166,
+     "lpips": 0.13835908472537994,
+     "dists": 0.18684959411621094,
+     "musiq": 46.16867446899414,
+     "maniqa": 0.4110322892665863,
+     "clipiqa": 0.6106730103492737
+    }
+   }
+  },
+  {
+   "id": "t040",
+   "method": "SeeSR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_001_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    0,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t040_generative.png",
+    "caps": "stimuli/t040_caps.png",
+    "reference": "stimuli/t040_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 22.670199871063232,
+     "lpips": 0.10752055048942566,
+     "dists": 0.22451698780059814,
+     "musiq": 48.71076202392578,
+     "maniqa": 0.5561107993125916,
+     "clipiqa": 0.5654390454292297
+    },
+    "caps": {
+     "psnr_y": 22.586750984191895,
+     "lpips": 0.11338569968938828,
+     "dists": 0.20605450868606567,
+     "musiq": 50.350242614746094,
+     "maniqa": 0.4873216152191162,
+     "clipiqa": 0.45605364441871643
+    }
+   }
+  },
+  {
+   "id": "t041",
+   "method": "SeeSR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_017_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    782,
+    1469
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t041_generative.png",
+    "caps": "stimuli/t041_caps.png",
+    "reference": "stimuli/t041_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 29.843051433563232,
+     "lpips": 0.17738357186317444,
+     "dists": 0.19175559282302856,
+     "musiq": 56.24258804321289,
+     "maniqa": 0.4104504883289337,
+     "clipiqa": 0.6485868692398071
+    },
+    "caps": {
+     "psnr_y": 29.960691928863525,
+     "lpips": 0.164350688457489,
+     "dists": 0.20119225978851318,
+     "musiq": 50.58933639526367,
+     "maniqa": 0.3524371385574341,
+     "clipiqa": 0.6217559576034546
+    }
+   }
+  },
+  {
+   "id": "t042",
+   "method": "SeeSR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_033_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    0,
+    384
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t042_generative.png",
+    "caps": "stimuli/t042_caps.png",
+    "reference": "stimuli/t042_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 20.332436561584473,
+     "lpips": 0.32536160945892334,
+     "dists": 0.2013949751853943,
+     "musiq": 65.90545654296875,
+     "maniqa": 0.6990793943405151,
+     "clipiqa": 0.5867131352424622
+    },
+    "caps": {
+     "psnr_y": 22.504637241363525,
+     "lpips": 0.38911473751068115,
+     "dists": 0.31171202659606934,
+     "musiq": 48.990943908691406,
+     "maniqa": 0.3894890546798706,
+     "clipiqa": 0.250435471534729
+    }
+   }
+  },
+  {
+   "id": "t043",
+   "method": "SeeSR",
+   "set": "RealSR_Nikon_x4",
+   "stem": "Nikon_050_HR",
+   "caps_c": 1.0,
+   "crop_tl": [
+    860,
+    392
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t043_generative.png",
+    "caps": "stimuli/t043_caps.png",
+    "reference": "stimuli/t043_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 27.47363567352295,
+     "lpips": 0.274186909198761,
+     "dists": 0.2287428379058838,
+     "musiq": 66.64320373535156,
+     "maniqa": 0.5740580558776855,
+     "clipiqa": 0.5997463464736938
+    },
+    "caps": {
+     "psnr_y": 27.290923595428467,
+     "lpips": 0.21426743268966675,
+     "dists": 0.21526408195495605,
+     "musiq": 50.788448333740234,
+     "maniqa": 0.4207373261451721,
+     "clipiqa": 0.4883778691291809
+    }
+   }
+  },
+  {
+   "id": "t044",
+   "method": "SeeSR",
+   "set": "DRealSR_x4",
+   "stem": "Canon_10_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    1984,
+    3584
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t044_generative.png",
+    "caps": "stimuli/t044_caps.png",
+    "reference": "stimuli/t044_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 26.475002765655518,
+     "lpips": 0.2730085849761963,
+     "dists": 0.2644895315170288,
+     "musiq": 58.57754898071289,
+     "maniqa": 0.38204678893089294,
+     "clipiqa": 0.4891897737979889
+    },
+    "caps": {
+     "psnr_y": 19.931470155715942,
+     "lpips": 0.29968300461769104,
+     "dists": 0.2660738229751587,
+     "musiq": 56.19771194458008,
+     "maniqa": 0.38250643014907837,
+     "clipiqa": 0.6292523145675659
+    }
+   }
+  },
+  {
+   "id": "t045",
+   "method": "SeeSR",
+   "set": "DRealSR_x4",
+   "stem": "IMG_140_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    1007,
+    5112
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t045_generative.png",
+    "caps": "stimuli/t045_caps.png",
+    "reference": "stimuli/t045_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 33.89700412750244,
+     "lpips": 0.1767200231552124,
+     "dists": 0.1861722469329834,
+     "musiq": 58.15306854248047,
+     "maniqa": 0.44001030921936035,
+     "clipiqa": 0.6444274187088013
+    },
+    "caps": {
+     "psnr_y": 35.8651065826416,
+     "lpips": 0.1252167522907257,
+     "dists": 0.13699960708618164,
+     "musiq": 29.616771697998047,
+     "maniqa": 0.2854996919631958,
+     "clipiqa": 0.3396514654159546
+    }
+   }
+  },
+  {
+   "id": "t046",
+   "method": "SeeSR",
+   "set": "DRealSR_x4",
+   "stem": "panasonic_158_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    1408,
+    1920
+   ],
+   "crop": 256,
+   "stratum": "textured",
+   "files": {
+    "generative": "stimuli/t046_generative.png",
+    "caps": "stimuli/t046_caps.png",
+    "reference": "stimuli/t046_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 24.86100673675537,
+     "lpips": 0.4180578291416168,
+     "dists": 0.24347245693206787,
+     "musiq": 64.37972259521484,
+     "maniqa": 0.4164023995399475,
+     "clipiqa": 0.5606268644332886
+    },
+    "caps": {
+     "psnr_y": 25.43757438659668,
+     "lpips": 0.5000945329666138,
+     "dists": 0.2783052921295166,
+     "musiq": 30.12887191772461,
+     "maniqa": 0.08193249255418777,
+     "clipiqa": 0.2880394756793976
+    }
+   }
+  },
+  {
+   "id": "t047",
+   "method": "SeeSR",
+   "set": "DRealSR_x4",
+   "stem": "sony_82_x4",
+   "caps_c": 0.5,
+   "crop_tl": [
+    2540,
+    1800
+   ],
+   "crop": 256,
+   "stratum": "random",
+   "files": {
+    "generative": "stimuli/t047_generative.png",
+    "caps": "stimuli/t047_caps.png",
+    "reference": "stimuli/t047_reference.png"
+   },
+   "crop_metrics": {
+    "generative": {
+     "psnr_y": 23.809692859649658,
+     "lpips": 0.372988760471344,
+     "dists": 0.26453715562820435,
+     "musiq": 60.14132308959961,
+     "maniqa": 0.4612603485584259,
+     "clipiqa": 0.474801629781723
+    },
+    "caps": {
+     "psnr_y": 24.3399977684021,
+     "lpips": 0.33690375089645386,
+     "dists": 0.23077833652496338,
+     "musiq": 33.08940505981445,
+     "maniqa": 0.1910848319530487,
+     "clipiqa": 0.26303139328956604
+    }
+   }
+  }
+ ],
+ "crop": 256,
+ "fidelity_partner": "realesrnet_x4plus",
+ "catch": [
+  {
+   "id": "cA0",
+   "block": "A",
+   "source": "t000",
+   "files": {
+    "good": "stimuli/t000_generative.png",
+    "bad": "stimuli/cA0_blurred.png",
+    "reference": "stimuli/t000_reference.png"
+   }
+  },
+  {
+   "id": "cA1",
+   "block": "A",
+   "source": "t014",
+   "files": {
+    "good": "stimuli/t014_generative.png",
+    "bad": "stimuli/cA1_blurred.png",
+    "reference": "stimuli/t014_reference.png"
+   }
+  },
+  {
+   "id": "cA2",
+   "block": "A",
+   "source": "t028",
+   "files": {
+    "good": "stimuli/t028_generative.png",
+    "bad": "stimuli/cA2_blurred.png",
+    "reference": "stimuli/t028_reference.png"
+   }
+  },
+  {
+   "id": "cA3",
+   "block": "A",
+   "source": "t042",
+   "files": {
+    "good": "stimuli/t042_generative.png",
+    "bad": "stimuli/cA3_blurred.png",
+    "reference": "stimuli/t042_reference.png"
+   }
+  },
+  {
+   "id": "cB0",
+   "block": "B",
+   "source": "t010",
+   "files": {
+    "good": "stimuli/t010_reference.png",
+    "bad": "stimuli/cB0_blurred.png",
+    "reference": "stimuli/t010_reference.png"
+   }
+  },
+  {
+   "id": "cB1",
+   "block": "B",
+   "source": "t024",
+   "files": {
+    "good": "stimuli/t024_reference.png",
+    "bad": "stimuli/cB1_blurred.png",
+    "reference": "stimuli/t024_reference.png"
+   }
+  },
+  {
+   "id": "cB2",
+   "block": "B",
+   "source": "t038",
+   "files": {
+    "good": "stimuli/t038_reference.png",
+    "bad": "stimuli/cB2_blurred.png",
+    "reference": "stimuli/t038_reference.png"
+   }
+  },
+  {
+   "id": "cB3",
+   "block": "B",
+   "source": "t004",
+   "files": {
+    "good": "stimuli/t004_reference.png",
+    "bad": "stimuli/cB3_blurred.png",
+    "reference": "stimuli/t004_reference.png"
+   }
+  }
+ ],
+ "catch_rule": "a participant's block is analysed only if every attention check in it is answered correctly"
+}

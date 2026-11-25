@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Super-Resolution Preference Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: one centred column of text; the image row is the only wide element.
+   Single deliberate look: a mid-grey surround, the viewing condition of ITU-R BT.500 image-quality tests,
+   so that no page colour biases the judgement. */
+:root {
+  --surround: #7c7e81;
+  --panel: #898b8e;
+  --frame: #5d6064;
+  --ink: #111316;
+  --ink-soft: #24272b;
+  --button: #1b2026;
+  --button-ink: #f3f4f5;
+  --button-hover: #2b323b;
+  --accent: #0d4a59;
+  --ok: #12462a;
+  --warn: #5e240c;
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head: "Space Grotesk", "Inter", system-ui, sans-serif;
+  color-scheme: light;
+}
+html, body { background: var(--surround); color: var(--ink); }
+body {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+}
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.prose { max-width: 66ch; display: flex; flex-direction: column; gap: 12px; }
+h1, h2 { font-family: var(--font-head); font-weight: 600; text-wrap: balance; margin: 0; color: var(--ink); }
+h1 { font-size: 1.9rem; line-height: 1.15; }
+h2 { font-size: 1.3rem; }
+p { margin: 0; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+ul.steps { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+.panel { background: var(--panel); border: 1px solid var(--frame); border-radius: 6px; padding: 16px 18px; }
+label.check { display: flex; gap: 10px; align-items: flex-start; }
+label.check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent); }
+.fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.fields label { display: flex; flex-direction: column; gap: 4px; font-weight: 500; }
+select {
+  font: inherit; color: var(--ink); background: #d9dadc; border: 1px solid var(--frame);
+  border-radius: 4px; padding: 6px 8px;
+}
+button {
+  font: inherit; font-weight: 600; color: var(--button-ink); background: var(--button);
+  border: 0; border-radius: 6px; padding: 10px 18px; cursor: pointer;
+}
+button:hover:not(:disabled) { background: var(--button-hover); }
+button:disabled { opacity: 0.45; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.note { font-size: 0.86rem; color: var(--ink-soft); }
+.status-ok { color: var(--ok); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+
+/* trial screen */
+.bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: baseline; }
+.progress { height: 6px; background: var(--frame); border-radius: 3px; overflow: hidden; }
+.progress > div { height: 100%; background: var(--ink); width: 0; }
+.question { font-family: var(--font-head); font-size: 1.25rem; font-weight: 600; }
+.ref { display: flex; justify-content: center; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 760px) { .pair { grid-template-columns: minmax(0, 1fr); } }
+figure { margin: 0; display: flex; flex-direction: column; gap: 8px; align-items: center; min-width: 0; }
+figure img {
+  display: block; width: 512px; max-width: 100%; height: auto; aspect-ratio: 1 / 1;
+  image-rendering: pixelated; border: 1px solid var(--frame); background: var(--frame);
+}
+figcaption { font-weight: 600; font-size: 0.95rem; }
+.choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 760px) { .choices { grid-template-columns: minmax(0, 1fr); } }
+.choices button { padding: 14px 18px; font-size: 1rem; }
+kbd { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.82em; background: #d9dadc; color: var(--ink);
+      border: 1px solid var(--frame); border-radius: 3px; padding: 0 4px; }
+textarea { width: 100%; min-height: 140px; font: 0.8rem ui-monospace, Menlo, Consolas, monospace; color: var(--ink);
+           background: #d9dadc; border: 1px solid var(--frame); border-radius: 4px; padding: 8px; box-sizing: border-box; }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+th, td { text-align: left; padding: 4px 12px 4px 0; border-bottom: 1px solid var(--frame); }
+.tablebox { overflow-x: auto; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section id="intro" class="prose">
+    <p class="eyebrow">Image quality study · about 12 minutes</p>
+    <h1>Super-Resolution Preference Study</h1>
+    <p>Each screen shows two versions of the same small region of a photograph, both enlarged four times by
+      computer methods. You pick one. There are no right answers; we want your honest impression.</p>
+    <div class="panel">
+      <ul class="steps">
+        <li><strong>Part 1 (<span class="nPer">52</span> choices):</strong> which image looks better: more natural and
+          detailed, with fewer artefacts.</li>
+        <li><strong>Part 2 (<span class="nPer">52</span> choices):</strong> a reference photo is shown above the pair;
+          pick the image that is closer to it.</li>
+        <li>A few screens have an obvious answer; they let us check that answers are attentive.</li>
+        <li>Use a computer screen at 100% zoom if you can. Answer with the buttons or the <kbd>←</kbd>/<kbd>→</kbd>
+          (or <kbd>1</kbd>/<kbd>2</kbd>) keys.</li>
+      </ul>
+    </div>
+    <div class="fields">
+      <label for="exp">Experience with image processing
+        <select id="exp">
+          <option value="">Prefer not to say</option>
+          <option value="none">None</option>
+          <option value="some">Some (hobby or coursework)</option>
+          <option value="expert">Professional or research</option>
+        </select>
+      </label>
+      <label for="disp">Screen you are using
+        <select id="disp">
+          <option value="">Prefer not to say</option>
+          <option value="laptop">Laptop</option>
+          <option value="monitor">Desktop monitor</option>
+          <option value="tablet">Tablet</option>
+          <option value="phone">Phone</option>
+        </select>
+      </label>
+    </div>
+    <label class="check" for="consent"><input type="checkbox" id="consent">
+      <span>I agree to take part. My choices, response times and the two answers above are stored for research,
+        linked only to an anonymous id. No name or email is recorded.</span></label>
+    <div class="row">
+      <button id="start" type="button" disabled>Start part 1</button>
+      <button id="resume" type="button" hidden>Continue where I left off</button>
+    </div>
+    <p id="saveNote" class="note"></p>
+    <p id="testNote" class="note status-warn" hidden>Test mode: these answers are marked as a test and are not analysed.</p>
+  </section>
+
+  <section id="trial" hidden>
+    <div class="wrap">
+      <div class="bar">
+        <span id="partLabel" class="eyebrow">Part 1 of 2</span>
+        <span id="count" class="note"></span>
+      </div>
+      <div class="progress" aria-hidden="true"><div id="progressFill"></div></div>
+      <p id="question" class="question"></p>
+      <div id="refBox" class="ref" hidden>
+        <figure><img id="imgRef" alt="Reference photo" width="512" height="512"><figcaption>Reference</figcaption></figure>
+      </div>
+      <div class="pair">
+        <figure><img id="img1" alt="Image 1" width="512" height="512"><figcaption>Image 1</figcaption></figure>
+        <figure><img id="img2" alt="Image 2" width="512" height="512"><figcaption>Image 2</figcaption></figure>
+      </div>
+      <div class="choices">
+        <button id="pick1" type="button">Image 1</button>
+        <button id="pick2" type="button">Image 2</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="break" class="prose" hidden>
+    <p class="eyebrow">Part 1 done</p>
+    <h2>Part 2: compare with the reference</h2>
+    <p>From now on a reference photo appears above each pair. Pick the image that is closer to the reference: same
+      shapes, textures and details. How pleasing an image looks no longer matters, only how close it is.</p>
+    <div class="row"><button id="startB" type="button">Start part 2</button></div>
+  </section>
+
+  <section id="done" class="prose" hidden>
+    <p class="eyebrow">Finished</p>
+    <h2>Thank you</h2>
+    <p id="doneMsg">Your answers are being saved…</p>
+    <div id="fallback" class="prose" hidden>
+      <p id="fallbackText">Your answers could not be sent to the study automatically. Please save them as a file and
+        send it to <span class="contact">the researcher who shared this page with you</span>.</p>
+      <div class="row">
+        <button id="saveFile" type="button">Save answers file</button>
+        <button id="copyJson" type="button">Copy answers</button>
+      </div>
+      <p id="fileStatus" class="note"></p>
+      <textarea id="jsonOut" readonly aria-label="Your answers as text"></textarea>
+    </div>
+  </section>
+
+</div>
+<script src="config.js"></script>
+<script>
+(() => {
+  const KEY = "srpref-draft-v2", SCHEMA = "sr-pref-2", PID_KEY = "srpref-pid";
+  const CFG = window.STUDY_CONFIG || {};
+  const ENDPOINT = String(CFG.endpoint || "").trim();
+  const CONTACT = String(CFG.contact || "").trim();
+  const TEST = new URLSearchParams(location.search).has("test");
+  const SAVE_EVERY = 13;                       // answers between automatic sends (each block has 52)
+  const $ = (id) => document.getElementById(id);
+  let manifest = null, byId = {}, state = null, busy = false, shownAt = 0;
+  let sendChain = Promise.resolve(), sendStatus = "none";    // none | confirmed | sent | failed
+
+  // anonymous participant id, kept in this browser only
+  function participantId() {
+    let id = null;
+    try { id = localStorage.getItem(PID_KEY); } catch (e) { /* storage blocked */ }
+    if (!id) {
+      id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+        : Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, "0")).join("");
+      try { localStorage.setItem(PID_KEY, id); } catch (e) { /* storage blocked */ }
+    }
+    return id;
+  }
+  const PID = participantId();
+
+  // ── seeded randomness: each participant gets their own order and left/right placement ──
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function shuffled(arr, rnd) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+  // each block: every trial (generative vs capped) plus that block's attention checks (good vs bad), shuffled
+  function blockItems(block) {
+    return manifest.trials.map((t) => ({ id: t.id, keys: ["generative", "caps"], isCatch: false }))
+      .concat((manifest.catch || []).filter((c) => c.block === block)
+        .map((c) => ({ id: c.id, keys: ["good", "bad"], isCatch: true })));
+  }
+  function planLength() { return blockItems("A").length + blockItems("B").length; }
+  function newState() {
+    const seed = Math.floor(Math.random() * 2 ** 31);
+    const rnd = mulberry32(seed);
+    const plan = [];
+    for (const block of ["A", "B"]) {
+      for (const it of shuffled(blockItems(block), rnd)) {
+        const flip = rnd() < 0.5;
+        plan.push({ id: it.id, block, left: it.keys[flip ? 1 : 0], right: it.keys[flip ? 0 : 1], isCatch: it.isCatch });
+      }
+    }
+    return { schema: SCHEMA, seed, started_at: new Date().toISOString(), finished: false, plan, pos: 0,
+             answers: [], meta: { experience: $("exp").value, display: $("disp").value,
+                                  viewport_w: window.innerWidth, dpr: window.devicePixelRatio || 1 } };
+  }
+
+  // ── storage: a local draft for resuming, plus sends to the study's Google Apps Script endpoint ──
+  // Each send appends one row with the whole record so far; the analysis keeps the longest record per session.
+  function saveDraft() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* storage blocked */ } }
+  function loadDraft() { try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); return s && s.schema === SCHEMA ? s : null; } catch (e) { return null; } }
+  function record() {
+    return { schema: state.schema, pid: PID, test: TEST, seed: state.seed, started_at: state.started_at,
+             updated_at: new Date().toISOString(), finished: state.finished, meta: state.meta,
+             n_answers: state.answers.length, answers: state.answers };
+  }
+  async function send(body) {
+    const opts = { method: "POST", body, headers: { "Content-Type": "text/plain;charset=utf-8" },
+                   keepalive: body.length < 60000 };
+    try {
+      const r = await fetch(ENDPOINT, opts);            // Apps Script answers with JSON readable cross-origin
+      const j = await r.json();
+      return j && j.ok ? "confirmed" : "failed";
+    } catch (e) {
+      try { await fetch(ENDPOINT, Object.assign({}, opts, { mode: "no-cors" })); return "sent"; }
+      catch (e2) { return "failed"; }
+    }
+  }
+  function persist() {
+    saveDraft();
+    if (!ENDPOINT) { updateSaveNote(); return sendChain; }
+    const body = JSON.stringify(record());
+    sendChain = sendChain.then(() => send(body)).then((s) => { sendStatus = s; updateSaveNote(); });
+    return sendChain;
+  }
+  function updateSaveNote() {
+    const el = $("saveNote");
+    if (!ENDPOINT) {
+      el.textContent = "Automatic saving is not set up for this page. At the end you will save your answers as a file.";
+      el.className = "note status-warn";
+    } else if (sendStatus === "failed") {
+      el.textContent = "Sending failed. Your answers are kept in this browser, and at the end you can save them as a file.";
+      el.className = "note status-warn";
+    } else {
+      el.textContent = "Your answers are sent to the study as you go.";
+      el.className = "note status-ok";
+    }
+  }
+
+  // ── screens ──
+  function show(id) { for (const s of ["intro", "trial", "break", "done"]) $(s).hidden = s !== id; }
+  function src(id, key) { return byId[id].files[key]; }
+  function preload(i) {
+    const step = state.plan[i]; if (!step) return;
+    for (const k of [step.left, step.right, "reference"]) { const im = new Image(); im.src = src(step.id, k); }
+  }
+  function renderTrial() {
+    const step = state.plan[state.pos];
+    const total = state.plan.length, half = total / 2;
+    const inA = step.block === "A";
+    $("partLabel").textContent = inA ? "Part 1 of 2" : "Part 2 of 2";
+    const k = inA ? state.pos + 1 : state.pos - half + 1;
+    $("count").textContent = `${k} of ${half}`;
+    $("progressFill").style.width = `${(100 * state.pos) / total}%`;
+    $("question").textContent = inA ? "Which image looks better?" : "Which image is closer to the reference?";
+    $("refBox").hidden = inA;
+    $("img1").src = src(step.id, step.left);
+    $("img2").src = src(step.id, step.right);
+    if (!inA) $("imgRef").src = src(step.id, "reference");
+    shownAt = performance.now();
+    busy = false;
+    preload(state.pos + 1);
+  }
+  function choose(which) {
+    if (busy || $("trial").hidden) return;
+    busy = true;
+    const step = state.plan[state.pos];
+    const chosen = which === 1 ? step.left : step.right;
+    state.answers.push({ trial: step.id, block: step.block, left: step.left, choice: chosen, catch: step.isCatch,
+                         rt_ms: Math.round(performance.now() - shownAt), t: new Date().toISOString() });
+    state.pos += 1;
+    const total = state.plan.length;
+    if (state.pos === total) { saveDraft(); return finish(); }      // finish() sends the final record
+    if (state.pos % SAVE_EVERY === 0 || state.pos === total / 2) persist(); else saveDraft();
+    if (state.pos === total / 2) { show("break"); return; }
+    setTimeout(renderTrial, 150);
+  }
+  async function finish() {
+    state.finished = true;
+    show("done");
+    await persist();
+    $("jsonOut").value = JSON.stringify(record(), null, 1);
+    if (sendStatus === "confirmed") {
+      $("doneMsg").textContent = "Your answers have been saved. You can close this page.";
+      $("doneMsg").className = "status-ok";
+      try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ }
+    } else if (sendStatus === "sent") {
+      $("doneMsg").textContent = "Your answers were sent. If you like, also save a copy as a file and send it along.";
+      $("fallbackText").hidden = true;
+      $("fallback").hidden = false;
+    } else {
+      $("doneMsg").textContent = "Almost done.";
+      $("fallback").hidden = false;
+    }
+  }
+
+  // ── wiring ──
+  if (CONTACT) for (const el of document.querySelectorAll(".contact")) el.textContent = CONTACT;
+  $("testNote").hidden = !TEST;
+  updateSaveNote();
+  $("consent").addEventListener("change", () => { $("start").disabled = !$("consent").checked || !manifest; });
+  $("start").addEventListener("click", () => {
+    state = newState(); saveDraft(); persist(); show("trial"); renderTrial();
+  });
+  $("resume").addEventListener("click", () => {
+    if (!state) return;
+    show(state.pos >= state.plan.length / 2 && state.answers.length === state.plan.length / 2 ? "break" : "trial");
+    if (!$("trial").hidden) renderTrial();
+  });
+  $("startB").addEventListener("click", () => { show("trial"); renderTrial(); });
+  $("pick1").addEventListener("click", () => choose(1));
+  $("pick2").addEventListener("click", () => choose(2));
+  document.addEventListener("keydown", (e) => {
+    if ($("trial").hidden || e.repeat) return;
+    if (e.key === "ArrowLeft" || e.key === "1") { e.preventDefault(); choose(1); }
+    if (e.key === "ArrowRight" || e.key === "2") { e.preventDefault(); choose(2); }
+  });
+  $("saveFile").addEventListener("click", () => {
+    const blob = new Blob([$("jsonOut").value], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `sr-preference-answers-${PID.slice(0, 8)}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    $("fileStatus").textContent = "Saved to your downloads. Please send the file to " + (CONTACT || "the researcher") + ".";
+  });
+  $("copyJson").addEventListener("click", () => {
+    const text = $("jsonOut").value;
+    const copied = () => { $("fileStatus").textContent = "Copied. Paste it into an email to " + (CONTACT || "the researcher") + "."; };
+    const manual = () => { $("jsonOut").select(); $("fileStatus").textContent = "Select-all is active: copy with Ctrl+C or ⌘C."; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(copied, manual);
+    else manual();
+  });
+
+  fetch("manifest.json").then((r) => r.json()).then((m) => {
+    manifest = m;
+    byId = Object.fromEntries(m.trials.concat(m.catch || []).map((x) => [x.id, x]));
+    for (const el of document.querySelectorAll(".nPer")) el.textContent = String(blockItems("A").length);
+    $("start").disabled = !$("consent").checked;
+    const draft = loadDraft();
+    if (draft && !draft.finished && draft.plan && draft.plan.length === planLength() && draft.pos > 0) {
+      state = draft; $("resume").hidden = false;
+    }
+  }).catch(() => { $("saveNote").textContent = "The study images could not be loaded. Please reload the page."; });
+})();
+</script>
+</body>
+</html>
